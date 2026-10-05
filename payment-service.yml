@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/razorpay-payment-db
+    url: jdbc:mysql://localhost:3306/razorpay-payment-db
   cloud:
     openfeign:
       client:
@@ -43,6 +43,6 @@ spring:
     activate:
       on-profile: k8s
   datasource:
-    url: jdbc:postgresql://postgres.razorpay-core.svc.cluster.local:5432/razorpay-payment-db
+    url: jdbc:mysql://mysql.razorpay-core.svc.cluster.local:3306/razorpay-payment-db
     username: payment_user
     password: ${PAYMENT_DB_PASSWORD}
