@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/razorpay-vault-db
+    url: jdbc:mysql://localhost:3306/razorpay-vault-db
 
 vault:
   master-key: NqcfbJG1zkOfBsNF/wPmlLA7aaOvh9RCHTYYgY/9A2Q=
@@ -22,7 +22,7 @@ spring:
     activate:
       on-profile: k8s
   datasource:
-    url: jdbc:postgresql://postgres.razorpay-core.svc.cluster.local:5432/razorpay-vault-db
+    url: jdbc:mysql://mysql.razorpay-core.svc.cluster.local:3306/razorpay-vault-db
     username: vault_user
     password: ${VAULT_DB_PASSWORD}
 
