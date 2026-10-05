@@ -12,8 +12,8 @@ spring:
   datasource:
     hikari:
       maximum-pool-size: 50
-    username: anuj
-    password: password
+    username: root
+    password: root
     driver-class-name: org.postgresql.Driver
   data:
     redis:
@@ -30,7 +30,7 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-        spring.json.trusted.packages: "com.codingshuttle.razorpay.*"
+        spring.json.trusted.packages: "com.paymentgateway.razorpay.*"
 
 eureka:
   client:
