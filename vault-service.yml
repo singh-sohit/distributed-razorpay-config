@@ -4,6 +4,10 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/razorpay-vault-db
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      connection-timeout: 30000
 
 vault:
   master-key: NqcfbJG1zkOfBsNF/wPmlLA7aaOvh9RCHTYYgY/9A2Q=
